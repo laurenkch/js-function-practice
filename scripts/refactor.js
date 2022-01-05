@@ -56,7 +56,7 @@
   
   // Put your answer below -------------------------
   
-  setTimeout(alert("Hello,World!", 2000));
+  setTimeout(alert("Hello,World!"), 2000);
   
   // -----------------------------------------------
   
@@ -87,12 +87,10 @@
   
   // Put your answer below -------------------------
   
-  //[c] z then y. It will not run the function setTimeout until after 1 second has passed. 
+  //[c] Because it will not run the function setTimeout until after 1 second has passed. 
   // It will initially assign the value of letter as "x", but it won't output anything.
-  //It will skip the setTimout function at first.
-  //It will reassign the letter to 'z'.
-  //It will log the letter as z.
-  //It will run the Timeout function which will reassign the letter to 'y' and then log it. 
+  //Then, it will reassign the letter to 'z' and log the letter as z.
+  //Lastly, it'll run the Timeout function which will reassign the letter to 'y' and log it. 
   
   // -----------------------------------------------
   
@@ -115,10 +113,9 @@
   
   // Put your answer below -------------------------
   
-//  var reverseStr = function(str) {
-//       return str.join(str.revers(str.split("")))
-//   }
-//   console.log(reverseStr("thisisatest"));
+ var reverseStr = function(str) {
+      return arr.join(arr.reverse(str.split("")))
+  }
   // -----------------------------------------------
   
   //////////////////////////////////////////////////
@@ -151,9 +148,16 @@
   };
   
   // Put your answer below -------------------------
-  
-  
-  
+  var spanishColor = function(colorName) {
+    const table = {
+        rojo: "#ff0000",
+        blanco: "#ffffff",
+        azul: "#0000ff",
+        verde: "#00ff00",
+        negro: "#000000",
+    }
+    return table[colorName];
+}
   // -----------------------------------------------
   
   //////////////////////////////////////////////////
@@ -196,6 +200,10 @@
   
   // Put your answer below -------------------------
   
+  function callNTimes (callback, n) {
+    var range = Array.from(Array(n).keys());
+    range.forEach(callback);
+  };
   
   // -----------------------------------------------
   
@@ -224,8 +232,18 @@
   
   // Put your answer below -------------------------
   
-  
-  
+ function getScore() {
+      let hiddenScore = 0;
+  }
+ let score = getScore();
+
+  var increaseScore = function() {
+    score++;
+  };
+  var decreaseScore = function() {
+    score--;
+  };
+
   // -----------------------------------------------
   
   //////////////////////////////////////////////////
@@ -274,8 +292,14 @@
   };
   
   // Put your answer below -------------------------
+  // It returns NaN because you're returning speed plus the string "amount" or "0 + amount" which isn't a number.
+
+  var speed = 0;
   
-  
+  var accelerate = function(amount = 1) {
+    speed += amount;
+  };
+
   
   // -----------------------------------------------
   
@@ -318,7 +342,7 @@
   };
   
   // Put your answer below -------------------------
-  
+callLater(function(timeout, ))
   
   // -----------------------------------------------
   

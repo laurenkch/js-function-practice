@@ -33,6 +33,9 @@
   
   // Put your answer below -------------------------
   
+  let doSomethingCool2 = function() {
+      console.log("Something Cool!");
+  }
   
   // -----------------------------------------------
   
@@ -53,6 +56,7 @@
   
   // Put your answer below -------------------------
   
+  setTimeout(alert("Hello,World!", 2000));
   
   // -----------------------------------------------
   
@@ -83,6 +87,12 @@
   
   // Put your answer below -------------------------
   
+  //[c] z then y. It will not run the function setTimeout until after 1 second has passed. 
+  // It will initially assign the value of letter as "x", but it won't output anything.
+  //It will skip the setTimout function at first.
+  //It will reassign the letter to 'z'.
+  //It will log the letter as z.
+  //It will run the Timeout function which will reassign the letter to 'y' and then log it. 
   
   // -----------------------------------------------
   
@@ -105,8 +115,10 @@
   
   // Put your answer below -------------------------
   
-  
-  
+//  var reverseStr = function(str) {
+//       return str.join(str.revers(str.split("")))
+//   }
+//   console.log(reverseStr("thisisatest"));
   // -----------------------------------------------
   
   //////////////////////////////////////////////////
@@ -158,6 +170,8 @@
   
   // Put your answer below -------------------------
   
+  var foo;
+  foo = "bar";
   
   // -----------------------------------------------
   
@@ -231,6 +245,9 @@
   
   // Put your answer below -------------------------
   
+  function addNumbers(numberA, numberB) {
+      console.log(numberA + numberB);
+  };
   
   
   // -----------------------------------------------

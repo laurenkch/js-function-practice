@@ -54,7 +54,6 @@
             return false;
         }
     }
-    // is there a faster way to write out those or statements??
 
     // ---------------------
     // Write a function rovarspraket() that will translate a text into "rövarspråket". That is, double every consonant and place an occurrence of "o" in between. For example, translate("this is fun") should return the string "tothohisos isos fofunon".
@@ -63,8 +62,6 @@
     /* This function doubles every consonant. It also puts an o inbetween the double consonants.*/
     /* It takes a string parameter of indeterminate length*/
     /* It returns a string parameter that will be altered to double the consonants and add an o inbetween*/
-
-    //I need to first locate the consonants, then add an "o" and the same consonant again. might be easier to locate the vowels and just leave those alone. 
 
     function rovarspraket(sentence) {
 
@@ -78,9 +75,6 @@
         }
         // console.log('rovar', updatedSentence);
         return updatedSentence;
-
-        //if I locate a consonant replace the consonants with "o + that same consonant"
-        //can I do sentence[i]?
     }
 
 
@@ -150,8 +144,6 @@
     /* This function takes in an array and a separate parameter i which is a number*/
     /* This function returns an array */
 
-    //**First, I will need to determine  */
-
     function filterLongWords(arr, i) {
         let shortenedArray = [];
         for (let x = 0; x < arr.length; x++) {
@@ -160,8 +152,6 @@
             }
         return shortenedArray;
         }
-
-   // console.log(filterLongWords('hello', 'world', 'does', 'anyone', 'really', 'know', 'what', 'time', 'it', 'is'));
 
     // ---------------------
     // Define a function charFreq() that takes a string and builds a frequency listing of the characters contained in it. Represent the frequency listing as a Javascript object. Try it with something like charFreq("abbabcbdbabdbdbabababcbcbab").
@@ -173,13 +163,19 @@
 
     //I could make a new string with the correct values. and then count that length. but i'm unsure how you'd make sure you got all the potential characters in the string. 
 
-    function charFreq(string) {
-        const output1 = {}
-        for (i = 0; i>string.length; i++) {
-            if (string.charAt(i))
+    function charFreq(str) {
+        let totals = {};
+        for (let i = 0; i < str.length; i++) {
+            let character = str[i];
+            if (totals.hasOwnProperty(character)) {
+                totals[character] = totals[character]+1;
+        } else { 
+            totals[character] = 1;
         }
-
     }
+        return totals;
+}
+console.log(charFreq("abbabcbdbabdbdbabababcbcbab"));
 
     ////////////////////////////////////////////////////////////////////////
     /////////////////////////DO NOT CHANGE CODE BELOW///////////////////////
